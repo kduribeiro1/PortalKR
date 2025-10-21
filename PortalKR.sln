@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36603.0 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortalKR", "PortalKR\PortalKR.csproj", "{8B50AE16-28C2-4534-9AE2-C514EE83D37A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8B50AE16-28C2-4534-9AE2-C514EE83D37A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B50AE16-28C2-4534-9AE2-C514EE83D37A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B50AE16-28C2-4534-9AE2-C514EE83D37A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B50AE16-28C2-4534-9AE2-C514EE83D37A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {918CEBC7-0CA8-4175-BCBB-FF375D1FC6D2}
+	EndGlobalSection
+EndGlobal
