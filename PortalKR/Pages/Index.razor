@@ -1,0 +1,75 @@
+@page "/"
+@inject HttpClient Http
+
+<section class="hero">
+<div class="inner container">
+    <div>
+        <h1 class="h-title">Segurança do Trabalho moderna e objetiva</h1>
+        <p class="h-sub">Consultoria, treinamentos e documentos técnicos com visual limpo e profissional.</p>
+        <p class="h-sub"><b>Site em desenvolvimento, os dados usados são fictícios.</b></p>
+        <div class="cta-row">
+            <a class="btn acc" href="/servicos">Ver serviços</a>
+            <a class="btn" href="/treinamentos">Modelos de cursos</a>
+            <a class="btn" href="/contato">Solicitar orçamento</a>
+        </div>
+        <div style="margin-top:16px;display:flex;gap:8px;flex-wrap:wrap">
+            <span class="tag">PGR</span><span class="tag">LTCAT</span><span class="tag">PCMSO</span><span class="tag">SIPAT</span>
+        </div>
+    </div>
+    <div>
+        <div class="card">
+            <h3>O que entrego</h3>
+            <ul>
+                <li>Diagnóstico e plano de ação (NRs e riscos)</li>
+                <li>Treinamentos com material e certificação</li>
+                <li>Laudos e documentos exigidos por lei</li>
+                <li>Acompanhamento contínuo</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</section>
+<section class="section container">
+    <h2>Destaques</h2>
+    <p>Modelos e serviços prontos para começar.</p>
+    <div class="grid">
+        @if (destaques == null)
+        {
+            <p>Carregando...</p>
+        }
+        else
+        {
+            @foreach (var destaque in destaques)
+            {
+                @switch (destaque.Tipo)
+                {
+                    case "Servico":
+                        var s = JsonConvert.DeserializeObject<Servico>(destaque.Dados);
+                        <ServiceCard Titulo="@s.Titulo" Descricao="@s.Descricao" Categoria="@s.Categoria" Entrega="@s.Entrega" Prazo="@s.Prazo" />
+                        break;
+                    case "Laudo":
+                        var l = JsonConvert.DeserializeObject<Laudo>(destaque.Dados);
+                        <DocCard Sigla="@l.Sigla" Titulo="@l.Titulo" Descricao="@l.Descricao" Atualizacao="@l.Atualizacao" />
+                        break;
+                    case "Treinamento":
+                        var t = JsonConvert.DeserializeObject<Treinamento>(destaque.Dados);
+                        <TrainingCard Nome="@t.Nome" Resumo="@t.Resumo" CargaHoraria="@t.CargaHoraria" Modalidade="@t.Modalidade" Certificacao="@t.Certificacao" />
+                        break;
+                    case "Apostila":
+                        var a = JsonConvert.DeserializeObject<Apostila>(destaque.Dados);
+                        <ApostilaCard Nome="@a.Nome" Resumo="@a.Resumo" Tipo="@a.Tipo" Modalidade="@a.Modalidade" FaixaEtaria="@a.FaixaEtaria" Link="@a.Link" />
+                        break;
+                }
+            }
+        }
+    </div>
+</section>
+@code {
+    private List<DestaqueItem>? destaques;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var json = 
+        destaques = await Http.GetFromJsonAsync<List<DestaqueItem>>("dados/destaques.json");
+    }
+}

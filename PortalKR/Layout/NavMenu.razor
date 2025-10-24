@@ -1,39 +1,15 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="">PortalKR</a>
-        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+@inject NavigationManager Nav
+<nav class="nav">
+  <div class="nav-inner container">
+    <a class="brand" href="/"><span class="dot"></span> KAIO RIBEIRO <span class="tag">Segurança do Trabalho</span></a>
+    <div class="menu">
+      <NavLink href="/" class="nav-link" activeClass="active" Match="NavLinkMatch.All">Início</NavLink>
+      <NavLink href="/servicos" class="nav-link" activeClass="active">Serviços</NavLink>
+      <NavLink href="/treinamentos" class="nav-link" activeClass="active">Treinamentos</NavLink>
+      <NavLink href="/laudos" class="nav-link" activeClass="active">Laudos</NavLink>   
+      <NavLink href="/apostilas" class="nav-link" activeClass="active">Apostilas</NavLink>   
+      <NavLink href="/sobre" class="nav-link" activeClass="active">Sobre</NavLink>
+      <NavLink href="/contato" class="nav-link" activeClass="active">Contato</NavLink>
     </div>
-</div>
-
-<div class="@NavMenuCssClass nav-scrollable" @onclick="ToggleNavMenu">
-    <nav class="flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Counter
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="weather">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Weather
-            </NavLink>
-        </div>
-    </nav>
-</div>
-
-@code {
-    private bool collapseNavMenu = true;
-
-    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-    private void ToggleNavMenu()
-    {
-        collapseNavMenu = !collapseNavMenu;
-    }
-}
+  </div>
+</nav>

@@ -1,0 +1,20 @@
+﻿[
+  {
+    "Sigla": "LTCAT",
+    "Titulo": "Laudo Técnico das Condições Ambientais",
+    "Descricao": "Avaliação de agentes nocivos.",
+    "Atualizacao": ""
+  },
+  {
+    "Sigla": "PPP/eSocial",
+    "Titulo": "Perfil Profissiográfico Previdenciário",
+    "Descricao": "Geração e atualização conforme eSocial.",
+    "Atualizacao": ""
+  },
+  {
+    "Sigla": "PCMSO",
+    "Titulo": "Programa de Controle Médico",
+    "Descricao": "Integração com PGR e exames periódicos.",
+    "Atualizacao": ""
+  }
+]

@@ -1,0 +1,29 @@
+@page "/laudos" 
+@inject HttpClient Http 
+
+<section class="section container">
+    <h1>Laudos & Documentos</h1>
+    <p class="h-sub">Emitimos e atualizamos documentos técnicos conforme legislação.</p>
+    <div class="grid">
+        @if (laudos == null)
+        {
+            <p>Carregando...</p>
+        }
+        else
+        {
+            @foreach (var laudo in laudos)
+            {
+                <DocCard Sigla="@laudo.Sigla" Titulo="@laudo.Titulo" Descricao="@laudo.Descricao" Atualizacao="@laudo.Atualizacao" />
+            }
+        }
+    </div>
+</section>
+
+@code {
+    private List<Laudo>? laudos;
+
+    protected override async Task OnInitializedAsync()
+    {
+        laudos = await Http.GetFromJsonAsync<List<Laudo>>("dados/laudos.json");
+    }
+}

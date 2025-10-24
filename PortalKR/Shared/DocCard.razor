@@ -1,0 +1,10 @@
+
+<div class="card">
+  <span class="badge">@Sigla</span>
+  <h3>@Titulo</h3>
+  <p>@Descricao</p>
+  <div class="kpi">
+    @if (!string.IsNullOrWhiteSpace(Atualizacao)) { <div class="box">Atualização: @Atualizacao</div> }
+  </div>
+</div>
+@code{[Parameter] public string Sigla{get;set;}="";[Parameter] public string Titulo{get;set;}="";[Parameter] public string Descricao{get;set;}="";[Parameter] public string Atualizacao{get;set;}="";}

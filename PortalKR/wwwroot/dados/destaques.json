@@ -1,0 +1,18 @@
+[
+  {
+    "Tipo": "Servico",
+    "Dados": "{ \"Titulo\": \"PGR & Inventário de Riscos\", \"Descricao\": \"Implementação, atualização e acompanhamento.\", \"Categoria\": \"Consultoria\", \"Entrega\": \"PDF + Apresentação\", \"Prazo\": \"a definir\" }"
+  },
+  {
+    "Tipo": "Laudo",
+    "Dados": "{ \"Sigla\": \"LTCAT\", \"Titulo\": \"Laudo Técnico das Condições Ambientais\", \"Descricao\": \"Base para PPP e eSocial.\", \"Atualizacao\": \"anual ou quando houver mudanças\" }"
+  },
+  {
+    "Tipo": "Treinamento",
+    "Dados": "{ \"Nome\": \"NR-10 Básico\", \"Resumo\": \"Segurança em instalações e serviços com eletricidade.\", \"CargaHoraria\": \"40h\", \"Modalidade\": \"Presencial/Online\", \"Certificacao\": \"Certificado reconhecido\" }"
+  },
+  {
+    "Tipo": "Apostila",
+    "Dados": "{ \"Nome\": \"Modelo: NR-XX — Título do Curso\", \"Resumo\": \"Objetivo e breve descrição.\", \"Tipo\": \"PDF\", \"Modalidade\": \"Presencial/Online\", \"FaixaEtaria\": \"+16\", \"Link\": \"/apostilas/nr-xx.pdf\" }"
+  }
+]

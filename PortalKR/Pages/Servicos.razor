@@ -1,0 +1,30 @@
+@page "/servicos"
+@using PortalKR.Models
+@inject HttpClient Http
+
+<section class="section container">
+    <h1>Serviços</h1>
+    <p class="h-sub">Consultoria para conformidade legal e redução de riscos.</p>
+    <div class="grid">
+        @if (servicos == null)
+        {
+            <p>Carregando...</p>
+        }
+        else
+        {
+            @foreach (var servico in servicos)
+            {
+                <ServiceCard Titulo="@servico.Titulo" Descricao="@servico.Descricao" Categoria="@servico.Categoria" Entrega="@servico.Entrega" Prazo="@servico.Prazo" />
+            }
+        }
+    </div>
+</section>
+
+@code {
+    private List<Servico>? servicos;
+
+    protected override async Task OnInitializedAsync()
+    {
+        servicos = await Http.GetFromJsonAsync<List<Servico>>("dados/servicos.json");
+    }
+}

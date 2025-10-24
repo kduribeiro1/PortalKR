@@ -1,0 +1,29 @@
+@page "/treinamentos"
+@inject HttpClient Http
+
+<section class="section container">
+    <h1>Modelos de Treinamentos</h1>
+    <p class="h-sub">A página lista apenas <strong>modelos</strong>. Duplique e edite depois.</p>
+    <div class="grid">
+        @if (treinamentos == null)
+        {
+            <p>Carregando...</p>
+        }
+        else
+        {
+            @foreach (var treinamento in treinamentos)
+            {
+                <TrainingCard Nome="@treinamento.Nome" Resumo="@treinamento.Resumo" CargaHoraria="@treinamento.CargaHoraria" Modalidade="@treinamento.Modalidade" Certificacao="@treinamento.Certificacao" />
+            }
+        }
+    </div>
+</section>
+
+@code {
+    private List<Treinamento>? treinamentos;
+
+    protected override async Task OnInitializedAsync()
+    {
+        treinamentos = await Http.GetFromJsonAsync<List<Treinamento>>("dados/treinamentos.json");
+    }
+}

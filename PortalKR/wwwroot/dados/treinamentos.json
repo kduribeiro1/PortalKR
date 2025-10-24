@@ -1,0 +1,23 @@
+﻿[
+  {
+    "Nome": "NR-10 Básico",
+    "Resumo": "Segurança em instalações e serviços com eletricidade.",
+    "CargaHoraria": "40h",
+    "Modalidade": "Presencial/Online",
+    "Certificacao": "Certificado reconhecido"
+  },
+  {
+    "Nome": "Brigada de Incêndio",
+    "Resumo": "Prevenção e combate a incêndios, evacuação e primeiros socorros.",
+    "CargaHoraria": "8h",
+    "Modalidade": "Presencial",
+    "Certificacao": "Certificado válido pelo Corpo de Bombeiros"
+  },
+  {
+    "Nome": "Integração de Segurança",
+    "Resumo": "Normas internas, EPIs e procedimentos de segurança.",
+    "CargaHoraria": "2h",
+    "Modalidade": "In-company",
+    "Certificacao": "Certificado interno"
+  }
+]

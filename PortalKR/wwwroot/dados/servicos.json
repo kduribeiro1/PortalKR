@@ -1,0 +1,30 @@
+﻿[
+  {
+    "Titulo": "PGR — Programa de Gerenciamento de Riscos",
+    "Descricao": "Mapeamento de perigos, avaliação e plano de ação.",
+    "Entrega": "Relatório + Inventário",
+    "Categoria": "Serviço",
+    "Prazo": ""
+  },
+  {
+    "Titulo": "Gestão de EPIs (NR-06)",
+    "Descricao": "Seleção, controle, ficha de EPI e treinamentos.",
+    "Entrega": "Planilhas + Procedimentos",
+    "Categoria": "Serviço",
+    "Prazo": "15 dias"
+  },
+  {
+    "Titulo": "SIPAT",
+    "Descricao": "Semana de prevenção com palestras e dinâmicas.",
+    "Entrega": "Cronograma + Materiais",
+    "Categoria": "Serviço",
+    "Prazo": "7 dias"
+  },
+  {
+    "Titulo": "Auditoria de Conformidade NRs",
+    "Descricao": "Checklist por setor, fotos e recomendações.",
+    "Entrega": "Relatório técnico",
+    "Categoria": "Serviço",
+    "Prazo": ""
+  }
+]

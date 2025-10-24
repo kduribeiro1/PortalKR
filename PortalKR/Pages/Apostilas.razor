@@ -1,0 +1,30 @@
+@page "/apostilas"
+@using PortalKR.Models
+@inject HttpClient Http
+
+<section class="section container">
+    <h1>Apostilas</h1>
+    <p class="h-sub">A página lista apenas <strong>modelos</strong>. Duplique e edite depois.</p>
+    <div class="grid">
+        @if (apostilas == null)
+        {
+            <p>Carregando...</p>
+        }
+        else
+        {
+            @foreach (var apostila in apostilas)
+            {
+                <ApostilaCard Nome="@apostila.Nome" Resumo="@apostila.Resumo" Tipo="@apostila.Tipo" Modalidade="@apostila.Modalidade" FaixaEtaria="@apostila.FaixaEtaria" Link="@apostila.Link" />
+            }
+        }
+    </div>
+</section>
+
+@code {
+    private List<Apostila>? apostilas;
+
+    protected override async Task OnInitializedAsync()
+    {
+        apostilas = await Http.GetFromJsonAsync<List<Apostila>>("dados/apostilas.json");
+    }
+}

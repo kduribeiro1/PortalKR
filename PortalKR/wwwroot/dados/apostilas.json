@@ -1,0 +1,26 @@
+﻿[
+  {
+    "Nome": "Modelo: NR-XX — Título do Curso",
+    "Resumo": "Objetivo e breve descrição.",
+    "Tipo": "PDF",
+    "Modalidade": "Presencial/Online",
+    "FaixaEtaria": "+16",
+    "Link": "/apostilas/nr-xx.pdf"
+  },
+  {
+    "Nome": "Modelo: Brigada de Incêndio",
+    "Resumo": "Tópicos principais.",
+    "Tipo": "PPT",
+    "Modalidade": "Presencial",
+    "FaixaEtaria": "+16",
+    "Link": "/apostilas/brigada.ppt"
+  },
+  {
+    "Nome": "Modelo: Integração de Segurança",
+    "Resumo": "Normas internas, EPIs e procedimentos.",
+    "Tipo": "PDF",
+    "Modalidade": "In-company",
+    "FaixaEtaria": "+16",
+    "Link": "/apostilas/integracao.pdf"
+  }
+]

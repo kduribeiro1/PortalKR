@@ -1,0 +1,19 @@
+
+<div class="card">
+  <span class="badge">@Tipo</span>
+  <h3>@Nome</h3>
+  <p>@Resumo</p>
+  <div class="kpi">
+    @if (!string.IsNullOrWhiteSpace(FaixaEtaria)) { <div class="box">@FaixaEtaria</div> }
+    @if (!string.IsNullOrWhiteSpace(Modalidade)) { <div class="box">@Modalidade</div> }
+    @if (!string.IsNullOrWhiteSpace(Link)) { <a class="box" href="@Link" target="_blank" rel="noopener">Download</a> }
+  </div>
+</div>
+@code{
+    [Parameter] public string Nome {get;set;}="";
+    [Parameter] public string Resumo {get;set;}="";
+    [Parameter] public string Modalidade {get;set;}="";
+    [Parameter] public string FaixaEtaria { get; set; } = "";
+    [Parameter] public string Tipo {get;set;}="PDF";
+    [Parameter] public string Link {get;set;}="";
+}
